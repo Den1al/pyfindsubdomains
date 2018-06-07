@@ -41,6 +41,9 @@ for result in fsd.get():
 """
 ```
 
+## TODO
+* Add more functionalities provided by the `findsubdomains` service.
+
 ## Credits
 
 [FindSubDomains](https://findsubdomains.com/)
