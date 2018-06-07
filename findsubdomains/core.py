@@ -37,10 +37,11 @@ class FindSubDomains(object):
     @strip_dict_items_decorator
     def _build_result_from_tr(self, tr):
         return dict(
-            domain=tr.find('td', {'data-field': 'Domain'})['title'],
+            domain=tr.find('td', {'data-field': 'Domain'}).get('title', ''),
             ip=tr.find('td', {'data-field': 'IP'}).text,
             asn=tr.find('td', {'data-field': 'AS'}).text,
-            org=tr.find('td', {'data-field': 'Organization'}).text,
+            org=tr.find('td', {'data-field': 'Organization'}
+                        ).find('div', {'class': 'overflow-hidden'}).text,
         )
 
     def _get_tr_table(self, soup):
