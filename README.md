@@ -1,4 +1,5 @@
-# PyFindSubDomains - A Pythonic wrapper over the findsubdomains service
+# PyFindSubDomains
+> A Pythonic wrapper over the findsubdomains service
 
 ## About
 
